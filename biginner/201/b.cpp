@@ -1,0 +1,44 @@
+//#pragma GCC optimize("Ofast")
+#include <bits/stdc++.h>
+#define rep2(a,i,n) for(ll i=(a);i<(n);i++)
+#define rep(i,n) for(ll i=0;i<(n);i++)
+#define pii pair<int, int>
+#define pll pair<ll, ll>
+#define cinf(x,n) for(ll i=0;i<(n);i++)cin>>x[i];
+#define coutf(x,n) for(ll i=0;i<(n);i++)cout<<x[i]<<endl;
+typedef long long ll;
+typedef unsigned long long ull;
+typedef long double ld;
+
+using namespace std;
+
+int main(){
+	//ios::sync_with_stdio(false);
+	//cin.tie(nullptr);
+	//cout<<fixed<<setprecision(20);
+	ll n;
+	cin >> n;
+	vector<string> s(n);
+	vector<ll> t(n);
+	rep(i,n)cin>>s[i]>>t[i];
+	vector<ll> u(n);
+	rep(i,n)u[i]=t[i];
+	sort(u.begin(),u.end());
+/*
+	cout << "debug start" << endl;
+	coutf(u,n);
+	cout << "debug end" << endl;
+	
+	
+	cout << "debug start" << endl;
+	cout << u[1] << endl;
+	cout << "debug end" << endl;
+*/	
+	
+	rep(i,n){
+		if(t[i]==u[n-2]){
+			cout << s[i] << endl;
+			return 0;
+		}
+	}
+}
